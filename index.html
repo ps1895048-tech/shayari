@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SHAYARI - Dil Ki Baatein</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🌹 SHAYARI</h1>
+    <p>दिल की बातें, शब्दों के साथ ❤️</p>
+</header>
+
+<main>
+
+    <!-- Search -->
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Shayari खोजें..."
+            oninput="searchShayari()"
+        >
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <button onclick="filterCategory('All')">All</button>
+        <button onclick="filterCategory('Love')">❤️ Love</button>
+        <button onclick="filterCategory('Sad')">😢 Sad</button>
+        <button onclick="filterCategory('Attitude')">😎 Attitude</button>
+        <button onclick="filterCategory('Friendship')">👫 Friendship</button>
+
+    </section>
+
+
+    <!-- Shayari Card -->
+    <section class="shayari-card">
+
+        <div class="category-name" id="categoryName">
+            Love
+        </div>
+
+        <h2>आज की शायरी</h2>
+
+        <p id="shayariText">
+            कुछ बातें दिल में रह जाती हैं,<br>
+            कुछ यादें आँखों में ठहर जाती हैं।
+        </p>
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button onclick="nextShayari()">
+                🔄 Next
+            </button>
+
+            <button onclick="copyShayari()">
+                📋 Copy
+            </button>
+
+            <button onclick="shareShayari()">
+                📤 Share
+            </button>
+
+        </div>
+
+
+        <!-- Like Favorite Comment -->
+
+        <div class="interaction">
+
+            <button onclick="likeShayari()">
+                ❤️ <span id="likeCount">0</span>
+            </button>
+
+            <button onclick="favoriteShayari()">
+                ⭐ Favorite
+            </button>
+
+            <button onclick="showCommentBox()">
+                💬 Comment
+            </button>
+
+        </div>
+
+
+        <!-- Comment -->
+
+        <div id="commentBox" class="comment-box">
+
+            <textarea
+                id="commentText"
+                placeholder="अपना comment लिखें..."
+            ></textarea>
+
+            <button onclick="addComment()">
+                💬 Post Comment
+            </button>
+
+            <div id="comments"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Add Shayari -->
+
+    <section class="add-section">
+
+        <h2>➕ अपनी शायरी जोड़ें</h2>
+
+        <select id="shayariCategory">
+
+            <option value="Love">❤️ Love</option>
+            <option value="Sad">😢 Sad</option>
+            <option value="Attitude">😎 Attitude</option>
+            <option value="Friendship">👫 Friendship</option>
+
+        </select>
+
+
+        <textarea
+            id="newShayari"
+            placeholder="यहाँ अपनी शायरी लिखें..."
+        ></textarea>
+
+
+        <button onclick="addShayari()">
+            💾 Save Shayari
+        </button>
+
+    </section>
+
+
+    <!-- Favorites -->
+
+    <section class="favorite-section">
+
+        <h2>⭐ मेरी Favorite Shayari</h2>
+
+        <div id="favoriteList"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 SHAYARI | Made with ❤️</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
