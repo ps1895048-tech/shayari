@@ -13,22 +13,57 @@ body {
 
 /* Header */
 
-header {
-    text-align: center;
-    padding: 30px 15px;
+header.site-header {
+    padding: 18px 15px;
     background: #111;
     color: white;
 }
 
-header h1 {
+.brand {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.site-logo {
+    width: 82px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.brand h1 {
     font-size: 38px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-header p {
+.brand p {
     font-size: 16px;
+    margin: 0;
 }
 
+/* Header text is styled inside .brand above. */
+
+
+/* Hero Poster */
+.hero-banner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto 0;
+    padding: 0 15px;
+}
+
+.hero-banner img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
 
 /* Main */
 
@@ -148,8 +183,26 @@ footer {
 
 @media (max-width: 600px) {
 
-    header h1 {
+    .brand {
+        gap: 10px;
+    }
+
+    .site-logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .brand h1 {
         font-size: 30px;
+    }
+
+    .hero-banner {
+        margin-top: 12px;
+        padding: 0 10px;
+    }
+
+    .hero-banner img {
+        border-radius: 14px;
     }
 
     #shayariText {
